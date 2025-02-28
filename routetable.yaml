@@ -5,7 +5,7 @@ metadata:
   name: b-routes
   namespace: bookinfo
   labels:
-    domain: bookinfo.demo.mtritaba.com
+    domain: 'demo.mtritaba.com'
 spec:
   routes:
   - matchers:
