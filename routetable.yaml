@@ -1,0 +1,19 @@
+---
+apiVersion: gateway.solo.io/v1
+kind: RouteTable
+metadata:
+  name: b-routes
+  namespace: bookinfo
+  labels:
+    domain: bookinfo.demo.mtritaba.com
+spec:
+  routes:
+  - matchers:
+     # the path matchers in this RouteTable can begin with any prefix
+    - prefix: /app-b
+    routeAction:
+      single:
+        upstream:
+          name: bookinfo-productpage-9080
+    options:
+      prefixRewrite: '/'
