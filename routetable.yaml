@@ -10,11 +10,14 @@ spec:
   routes:
   - matchers:
      # the path matchers in this RouteTable can begin with any prefix
-    - prefix: /app-b
+    - prefix: /productpage
+    - prefix: /static
+    - prefix: /login
+    - prefix: /logout
+    - prefix: /api/v1/products
+    - prefix: /callback
     routeAction:
       single:
         upstream:
-          name: bookinfo-productpage-9080
+          name: istio-ingress-istio-ingress-443
           namespace: gloo-system
-    options:
-      prefixRewrite: '/'
