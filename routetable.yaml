@@ -14,7 +14,7 @@ spec:
     routeAction:
       single:
         upstream:
-          name: bookinfo-productpage-static-9080
+          name: bookinfo-productpage-9080
           namespace: gloo-system
     options:
       prefixRewrite: '/'
